@@ -1,0 +1,22 @@
+node_count,relationship_count,result_count,gpu_conversion_time,gpu_runtime,cypher_runtime,cypher_query
+3,3,3801,186,50,167,MATCH (B:Actor:Director:Person)-[:DIRECTED]->(A:Movie), (B:Actor:Director:Person)-[:DIRECTED]->(C:Movie), (B:Actor:Director:Person)-[:ACTS_IN]->(A:Movie) RETURN A, B, C;
+3,3,211,176,51,89,MATCH (A:Director:Person)-[:DIRECTED]->(B:Movie), (C:Actor:Director:Person)-[:DIRECTED]->(B:Movie), (C:Actor:Director:Person)-[:ACTS_IN]->(B:Movie) RETURN A, B, C;
+3,3,211,166,54,90,MATCH (A:Actor:Director:Person)-[:DIRECTED]->(B:Movie), (C:Director:Person)-[:DIRECTED]->(B:Movie), (A:Actor:Director:Person)-[:ACTS_IN]->(B:Movie) RETURN A, B, C;
+3,3,74,160,44,75,MATCH (A:Actor:Director:Person)-[:DIRECTED]->(B:Movie), (C:Actor:Director:Person)-[:DIRECTED]->(B:Movie), (A:Actor:Director:Person)-[:ACTS_IN]->(B:Movie) RETURN A, B, C;
+3,3,6726,159,155,128,MATCH (A:Actor:Director:Person)-[:DIRECTED]->(B:Movie), (C:Actor:Person)-[:ACTS_IN]->(B:Movie), (A:Actor:Director:Person)-[:ACTS_IN]->(B:Movie) RETURN A, B, C;
+3,3,6713,183,39,123,MATCH (B:Actor:Director:Person)-[:DIRECTED]->(A:Movie), (B:Actor:Director:Person)-[:ACTS_IN]->(C:Movie), (B:Actor:Director:Person)-[:ACTS_IN]->(A:Movie) RETURN A, B, C;
+3,3,6726,179,165,106,MATCH (B:Actor:Director:Person)-[:DIRECTED]->(A:Movie), (B:Actor:Director:Person)-[:ACTS_IN]->(A:Movie), (C:Actor:Person)-[:ACTS_IN]->(A:Movie) RETURN A, B, C;
+3,3,211,163,55,64,MATCH (B:Actor:Director:Person)-[:DIRECTED]->(A:Movie), (B:Actor:Director:Person)-[:ACTS_IN]->(A:Movie), (C:Director:Person)-[:DIRECTED]->(A:Movie) RETURN A, B, C;
+3,3,3801,157,35,74,MATCH (A:Actor:Director:Person)-[:DIRECTED]->(B:Movie), (A:Actor:Director:Person)-[:ACTS_IN]->(B:Movie), (A:Actor:Director:Person)-[:DIRECTED]->(C:Movie) RETURN A, B, C;
+3,3,211,195,51,61,MATCH (B:Director:Person)-[:DIRECTED]->(A:Movie), (C:Actor:Director:Person)-[:DIRECTED]->(A:Movie), (C:Actor:Director:Person)-[:ACTS_IN]->(A:Movie) RETURN A, B, C;
+3,3,6713,156,34,88,MATCH (A:Actor:Director:Person)-[:DIRECTED]->(B:Movie), (A:Actor:Director:Person)-[:ACTS_IN]->(B:Movie), (A:Actor:Director:Person)-[:ACTS_IN]->(C:Movie) RETURN A, B, C;
+3,3,74,157,38,61,MATCH (A:Actor:Director:Person)-[:DIRECTED]->(B:Movie), (C:Actor:Director:Person)-[:DIRECTED]->(B:Movie), (C:Actor:Director:Person)-[:ACTS_IN]->(B:Movie) RETURN A, B, C;
+3,3,6726,159,156,78,MATCH (A:Actor:Director:Person)-[:DIRECTED]->(B:Movie), (A:Actor:Director:Person)-[:ACTS_IN]->(B:Movie), (C:Actor:Person)-[:ACTS_IN]->(B:Movie) RETURN A, B, C;
+3,3,342,190,38,66,MATCH (A:Actor:Director:Person)-[:DIRECTED]->(B:Movie), (C:Actor:Director:Person)-[:ACTS_IN]->(B:Movie), (A:Actor:Director:Person)-[:ACTS_IN]->(B:Movie) RETURN A, B, C;
+3,3,6713,154,35,73,MATCH (B:Actor:Director:Person)-[:ACTS_IN]->(A:Movie), (B:Actor:Director:Person)-[:DIRECTED]->(C:Movie), (B:Actor:Director:Person)-[:ACTS_IN]->(C:Movie) RETURN A, B, C;
+3,3,1,151,29,41,MATCH (B:User:Person)-[:FRIEND]->(A:User:Person), (B:User:Person)-[:FRIEND]->(C:User:Person), (C:User:Person)-[:FRIEND]->(A:User:Person) RETURN A, B, C;
+3,3,1,190,38,48,MATCH (A:User:Person)-[:RATED]->(B:Movie), (C:Actor:Director:Person)-[:DIRECTED]->(B:Movie), (C:Actor:Director:Person)-[:ACTS_IN]->(B:Movie) RETURN A, B, C;
+3,3,1,150,29,48,MATCH (A:User:Person)-[:FRIEND]->(B:User:Person), (C:User:Person)-[:FRIEND]->(B:User:Person), (C:User:Person)-[:FRIEND]->(A:User:Person) RETURN A, B, C;
+3,3,1,159,30,34,MATCH (A:User:Person)-[:FRIEND]->(B:User:Person), (C:User:Person)-[:FRIEND]->(B:User:Person), (A:User:Person)-[:FRIEND]->(C:User:Person) RETURN A, B, C;
+3,3,342,179,38,78,MATCH (B:Actor:Director:Person)-[:DIRECTED]->(A:Movie), (B:Actor:Director:Person)-[:ACTS_IN]->(A:Movie), (C:Actor:Director:Person)-[:ACTS_IN]->(A:Movie) RETURN A, B, C;
+3,3,3801,167,34,69,MATCH (A:Actor:Director:Person)-[:DIRECTED]->(B:Movie), (A:Actor:Director:Person)-[:DIRECTED]->(C:Movie), (A:Actor:Director:Person)-[:ACTS_IN]->(C:Movie) RETURN A, B, C;
